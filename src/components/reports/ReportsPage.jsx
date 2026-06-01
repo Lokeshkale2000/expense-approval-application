@@ -55,7 +55,7 @@ export default function ReportsPage() {
                   key={tab.key}
                   className={`rp-tab${activeTab === tab.key ? ' rp-activeTab' : ''}`}
                   onClick={() =>
-                    navigate(tab.key === 'pending' ? '/expenses/pending' : '/expenses/all')
+                    navigate(tab.key === 'pending' ? '/expenses/pending' : '/')
                   }
                 >
                   {tab.label}

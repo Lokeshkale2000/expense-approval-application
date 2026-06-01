@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { label: 'Dashboard', icon: LayoutDashboard, to: '/dashboard' },
   { label: 'Teams', icon: Users, to: '/teams' },
   { label: 'Roles', icon: Shield, to: '/roles' },
-  { label: 'Expense', icon: Receipt, to: '/expenses/all', base: '/expenses' },
+  { label: 'Expense', icon: Receipt, to: '/', base: '/expenses' },
   { label: 'Rewards', icon: Gift, to: '/rewards' },
   { label: 'Smart Cards', icon: CreditCard, to: '/smart-cards' },
   { label: 'Reports', icon: FileText, to: '/reports' },

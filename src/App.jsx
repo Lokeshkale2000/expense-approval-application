@@ -22,7 +22,7 @@ export default function App() {
           <main className="app-main">
             <Routes>
               <Route path="/expenses" element={<ReportsPage />} />
-              <Route path="/expenses/all" element={<ReportsPage />} />
+              <Route path="/" element={<ReportsPage />} />
               <Route path="/expenses/pending" element={<ReportsPage />} />
               <Route path="/expenses/report/:id" element={<ReportDetailPage />} />
               <Route path="/dashboard" element={<PlaceholderPage title="Dashboard" />} />
