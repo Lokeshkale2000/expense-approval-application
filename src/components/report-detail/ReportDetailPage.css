@@ -1,0 +1,370 @@
+/* ── ReportDetailPage.css ── */
+
+.rd-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-app, #F5F5F7);
+  min-height: 100vh;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── Breadcrumb ── */
+.rd-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 14px 24px 0;
+  font-size: 12.5px;
+  color: var(--text-muted, #888);
+  font-weight: 700;
+}
+
+.rd-breadcrumb a,
+.rd-breadcrumb button {
+  color: var(--text-muted, #888);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.rd-breadcrumb a:hover,
+.rd-breadcrumb button:hover { color: var(--primary, #6C3FC5); }
+.rd-breadcrumbSep { font-size: 12px; color: #bbb; font-weight: 700; margin: 0 2px; }
+
+/* ── Content wrapper ── */
+.rd-content {
+  padding: 14px 24px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Employee Card ── */
+.rd-employeeCard {
+  background: #fff;
+  border-bottom: 1px solid var(--border, #E8E8E8);
+  border-radius: 0;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.rd-empInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.rd-empDetails {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  border-right: 1px solid var(--border, #E8E8E8);
+  min-width: 130px;
+}
+
+.rd-empIdText {
+  font-size: 11px;
+  color: var(--text-muted, #999);
+  margin-bottom: 1px;
+}
+
+.rd-empName {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.rd-empMeta {
+  display: flex;
+  gap: 0;
+  margin-left: 0;
+}
+
+.rd-empMetaGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+}
+
+.rd-empMetaGroupBorder {
+  border-right: 1px solid var(--border, #E8E8E8);
+}
+
+.rd-empMetaLabel {
+  font-size: 11px;
+  color: var(--text-muted, #999);
+  margin-bottom: 2px;
+}
+
+.rd-empMetaValue {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* ── Header action buttons ── */
+.rd-headerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.rd-btnDownload {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border, #E0E0E0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary, #666);
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.rd-btnDownload:hover { border-color: var(--primary, #6C3FC5); color: var(--primary, #6C3FC5); }
+
+.rd-btnRejectReport {
+  padding: 7px 20px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border, #E0E0E0);
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.rd-btnRejectReport:hover { border-color: #E53E3E; color: #E53E3E; }
+
+.rd-btnApproveReport {
+  padding: 7px 22px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: var(--primary, #6C3FC5);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.rd-btnApproveReport:hover { background: var(--primary-hover, #5a32a3); }
+
+/* ── Report Summary Row ── */
+.rd-reportSummaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.rd-reportTitleGroup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rd-reportTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Amount boxes sit on the RIGHT, separated by a vertical divider */
+.rd-amountGroup {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.rd-amountBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 24px;
+}
+
+.rd-amountBox:first-child {
+  border-right: 1px solid var(--border, #E8E8E8);
+}
+
+.rd-amountLabel {
+  font-size: 11px;
+  color: var(--text-muted, #999);
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+.rd-amountValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+/* ── Main Layout ── */
+.rd-mainLayout {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+/* ── Bills Panel ── */
+.rd-billsPanel {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  
+  overflow: hidden;
+  min-width: 0;
+}
+
+.rd-billsToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.rd-tabs { display: flex; }
+
+.rd-tab {
+  padding: 13px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary, #777);
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+}
+.rd-tab:hover { color: var(--primary, #6C3FC5); }
+.rd-tab.rd-activeTab {
+  color: var(--primary, #6C3FC5);
+  border-bottom-color: var(--primary, #6C3FC5);
+  font-weight: 600;
+}
+
+.rd-billsToolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rd-iconBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4F4F4F;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.rd-iconBtn:hover { background: #F3EEFF; color: var(--primary, #6C3FC5); }
+
+.rd-searchWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border, #E0E0E0);
+  border-radius: 7px;
+  padding: 5px 9px;
+  width: 160px;
+  background: #fff;
+}
+.rd-searchWrap input {
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #333;
+  width: 100%;
+  background: transparent;
+}
+.rd-searchWrap input::placeholder { color: #bbb; }
+
+/* ── Bills List ── */
+.rd-billsList { padding: 0; }
+
+.rd-emptyBills {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted, #aaa);
+  font-size: 13px;
+}
+
+/* ── Sidebar ── */
+.rd-sidebar {
+  width: 215px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border, #E8E8E8);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #F6F3FB;
+  align-self: stretch;
+}
+
+.rd-sideCard {
+  background: #F6F3FB;
+  border-bottom: 1px solid var(--border, #EEE);
+  padding: 14px 16px;
+}
+.rd-sideCard:last-child { border-bottom: none; flex: 1; }
+
+.rd-sideCardTitle {
+  font-size: 11.5px;
+  color: #999;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.rd-approverRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.rd-approverName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.rd-sideLink {
+  font-size: 12px;
+  color: var(--primary, #6C3FC5);
+  cursor: pointer;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.rd-sideLink:hover { text-decoration: underline; }
+
+.rd-sideValue {
+  font-size: 13px;
+  color: #1a1a1a;
+}
